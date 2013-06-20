@@ -11,5 +11,7 @@ class User < ActiveRecord::Base
                        :on => :create,
                        :length => {:minimum => 5, :maximum => 40}
 
+  has_many :likes
+  has_many :beers, through: :likes
 
 end
