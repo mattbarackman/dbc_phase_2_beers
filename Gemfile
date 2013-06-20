@@ -21,6 +21,8 @@ gem 'bcrypt-ruby'
 
 gem 'awesome_print'
 
+gem 'faker'
+
 group :test do
   gem 'faker'
   gem 'rspec'
