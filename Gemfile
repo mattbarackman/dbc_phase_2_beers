@@ -23,6 +23,8 @@ gem 'awesome_print'
 
 gem 'faker'
 
+gem 'naive_bayes'
+
 group :test do
   gem 'faker'
   gem 'rspec'
