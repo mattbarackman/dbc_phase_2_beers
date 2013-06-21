@@ -35,3 +35,4 @@ bob_mexican = User.create(name:"bob", email: "bob@gmail.com", password: "passwor
 bob_mexican.likes << Like.create(beer_id: 1)
 bob_mexican.likes << Like.create(beer_id: 2)
 bob_mexican.save
+

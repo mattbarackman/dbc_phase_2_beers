@@ -1,0 +1,7 @@
+<div class="recommendations">
+  <ul>
+    <% @recommendations.each do |beer| %>  
+      <li> <%=beer[0].name%> (<%=beer[1]%>) </li>
+    <% end %>
+  </ul>
+<form>

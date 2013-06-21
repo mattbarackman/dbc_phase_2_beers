@@ -23,8 +23,9 @@ gem 'awesome_print'
 
 gem 'faker'
 
-gem 'naive_bayes'
+gem 'redis'
 
+gem 'recommendify'
 group :test do
   gem 'faker'
   gem 'rspec'

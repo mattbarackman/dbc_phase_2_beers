@@ -1,0 +1,7 @@
+<form class="beer_choices" action="/<%=current_user.id%>/likes" method="post">
+  <% @beer_choices.each do |beer| %>
+  
+  <li><input type="checkbox" name="likes[]" value=<%="#{beer.id}"%>><%=beer.name%></li>
+  <% end %>
+  <li><input type="submit" value="save likes"></li>
+<form>

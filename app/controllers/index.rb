@@ -1,6 +1,23 @@
 get '/' do
- @users = User.all
+  @users = User.all
   erb :index
+end
+
+get '/beer_choices' do
+  @beer_choices = Beer.all
+  erb :choice_form
+end
+
+post '/:user_id/likes' do |user_id|
+  save_likes(params[:likes])
+  find_recommendations
+  redirect "/#{user_id}/recommendations"
+end
+
+get '/:user_id/recommendations' do
+  beers = current_user.recommendations
+  @recommendations = beers.map {|reco| [Beer.find(reco.beer_id), reco.score]}
+  erb :recommendations
 end
 
 #----------- SESSIONS -----------

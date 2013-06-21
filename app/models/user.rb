@@ -13,5 +13,6 @@ class User < ActiveRecord::Base
 
   has_many :likes
   has_many :beers, through: :likes
+  has_many :recommendations
 
 end

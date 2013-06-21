@@ -22,7 +22,9 @@ require 'erb'
 require 'bcrypt'
 require 'awesome_print'
 require 'faker'
-require 'naive_bayes'
+require 'redis'
+
+require 'recommendify'
 
 # Some helper constants for path-centric logic
 APP_ROOT = Pathname.new(File.expand_path('../../', __FILE__))
@@ -40,3 +42,5 @@ config = YAML.load_file(APP_ROOT.join('config', 'beers.yml'))
 config.each do |key, value|
   ENV[key] = value
 end
+
+# Recommendify.redis = Redis.new
